@@ -292,6 +292,7 @@ async def create_button(m):
 async def notes_create_button(text):
     buttons = InlineKeyboard(row_width=2)
     keyboard = []
+    pages = {}
     split_text = text.split("-/", 1)
     for X in split_text[1].split():
         split_X = X.split(":", 1)
