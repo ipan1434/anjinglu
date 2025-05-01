@@ -125,13 +125,13 @@ async def cekidte(client, message):
     msg = f"""
 <blockquote><b>╭──「 🔍 INFORMASI BELIAU 」</b>
 │ 👤 <b>Nama Beliau Nih:</b> {name_link}
-│ 🟢 <b>ID Beliau:</b> <code>{target_user.id}</code> {digit_info}
+│ 🟢 <b>ID USER:</b> <code>{target_user.id}</code> {digit_info}
 │ 🔱 <b>Username Nya:</b> {username_text}
-│ 🏷️ <b>Data Beliau:</b> <code>{target_user.dc_id or 'Tidak diketahui'}</code>
+│ 🏷️ <b>DC ID USER:</b> <code>{target_user.dc_id or 'Tidak diketahui'}</code>
 │ ✨️ <b>Status Premium Nya:</b> { "Premium ✅" if getattr(target_user, 'is_premium', False) else "Tidak ❌"}
 │ 🆔️ <b>Chat ID:</b> <code>{message.chat.id}</code> ({chat_title})
 │ 🔗 <b>Link Profil:</b> <a href="tg://user?id={target_user.id}">Klik Disini</a>
-╰──「 <b>By @{client.me.username}</b> 」</blockquote>
+╰──「 <b>CREATE BY @UserboootliteIPAN_bot</b> 」</blockquote>
 """
 
     if profile_card_path:
