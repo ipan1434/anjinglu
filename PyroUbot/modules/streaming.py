@@ -21,19 +21,24 @@ from PyroUbot import *
 
 __MODULE__ = "streaming"
 __HELP__ = f"""
-<blockquote>
-╭
-┊➤ᴘʟᴀʏ [ ᴜʀʟ,ᴛɪᴛʟᴇ,ʀᴇᴘʟʏ-ᴍᴘ3 ] 
-┊ᴘʟᴀʏ ᴍᴜsɪᴄ ɪɴ ᴏs
-┊➤ᴠᴘʟᴀʏ[ ᴜʀʟ,ᴛɪᴛʟᴇ,ʀᴇᴘʟʏ-ᴍᴘ4 ]
-┊ᴘʟᴀʏɪɴɢ ᴠɪᴅᴇᴏ ɪɴ ᴏs
-┊➤ᴇɴᴅ
-┊ᴇɴᴅᴇᴅ ᴏs
-┊➤ᴘᴀᴜsᴇ
-┊ᴘᴀᴜsᴇ ᴀᴜᴅɪᴏ ᴏʀ ᴠɪᴅᴇᴏ ᴏs
-┊➤ʀᴇsᴜᴍᴇ
-┊ʀᴇsᴜᴍᴇ ᴠɪᴅᴇᴏ ᴏʀ ᴀᴜᴅɪᴏ ᴏs
-╰</blockquote>
+⪼ Dokumen untuk Streaming
+
+<blockquote> Memulai streaming audio.
+ <code>{0}play  (judul/balas media/link) </blockquote> 
+
+<blockquote> Memulai Streaming Video.
+<code>{0}vplay  (judul/balas media/link) </blockquote> 
+
+<blockquote> Menghentikam Streaming.
+<code>{0}end </blockquote>
+
+<blockquote>Menjeda Streaming.
+<code>{0} pause</blockquote>
+
+<blockquote> Melanjutkan Streaming yang dijeda.
+<code>{0}resume   </blockquote> 
+
+🤖 USER IPAN LITE
 """
 
 import os
@@ -63,7 +68,7 @@ async def play_audio(client, message):
         return await message.reply(f"{brhsl} **Playing converted audio!**")
 
     if len(message.command) < 2:
-        return await message.reply(f"{ggl} **Provide a link or title!**")
+        return await message.reply(f"{ggl} **❌ Gunakan perintah: .play [url_link] .play [title]**")
 
     query = " ".join(message.command[1:])
     url = query if "youtube.com" in query or "youtu.be" in query else None
@@ -75,7 +80,7 @@ async def play_audio(client, message):
         url = search["result"][0]["link"]
 
     try:
-        mex = await message.reply(f"{prs} **Downloading audio...**")
+        mex = await message.reply(f"{prs} **Processing...**")
         ydl_opts = {
             "format": "bestaudio/best",
             "outtmpl": "downloads/%(title)s.%(ext)s",
@@ -90,10 +95,10 @@ async def play_audio(client, message):
             file_path = f"downloads/{info['title']}.opus"
 
         if not os.path.exists(file_path):
-            return await mex.edit(f"{ggl} **Download failed!**")
+            return await mex.edit(f"{ggl} **TERJADI EROR**")
 
         await client.call_py.play(message.chat.id, MediaStream(file_path))
-        await mex.edit(f"{brhsl} **Playing audio!**")
+        await mex.edit(f"{brhsl} **SUCCES PLAY MUSIC**")
     except Exception as e:
         await mex.edit(f"{ggl} **Error: {str(e)}**")
 
@@ -109,10 +114,10 @@ async def play_video(client, message):
         video_file = await message.reply_to_message.download(f"downloads/{message.reply_to_message.video.file_name}")
 
         await client.call_py.play(message.chat.id, MediaStream(video_file))
-        return await message.reply(f"{brhsl} **Playing replied video!**")
+        return await message.reply(f"{brhsl} **Playing replay video!**")
 
     if len(message.command) < 2:
-        return await message.reply(f"{ggl} **Provide a link or title!**")
+        return await message.reply(f"{ggl} **❌ Gunakan perintah: .vplay [LINK YOUTUBE] .vplay [JUDUL]**")
 
     query = " ".join(message.command[1:])
     url = query if "youtube.com" in query or "youtu.be" in query else None
@@ -120,11 +125,11 @@ async def play_video(client, message):
     if not url:
         search = VideosSearch(query, limit=1).result()
         if not search["result"]:
-            return await message.reply(f"{ggl} **Video not found!**")
+            return await message.reply(f"{ggl} **Video TIDAK TERSEDIA**")
         url = search["result"][0]["link"]
 
     try:
-        mex = await message.reply(f"{prs} **Downloading video...**")
+        mex = await message.reply(f"{prs} **PROSES..**")
         ydl_opts = {
             "format": "bv*+ba/b",  # Menggunakan kombinasi best video + best audio
             "outtmpl": "downloads/%(title)s.%(ext)s",
@@ -138,10 +143,10 @@ async def play_video(client, message):
             file_path = f"downloads/{info['title']}.mp4"
 
         if not os.path.exists(file_path):
-            return await mex.edit(f"{ggl} **Download failed!**")
+            return await mex.edit(f"{ggl} **TERJADI EROR**")
 
         await client.call_py.play(message.chat.id, MediaStream(file_path))
-        await mex.edit(f"{brhsl} **Playing video!**")
+        await mex.edit(f"{brhsl} **SUCCES PLAY VIDIO**")
     except Exception as e:
         await mex.edit(f"{ggl} **Error: {str(e)}**")
 
