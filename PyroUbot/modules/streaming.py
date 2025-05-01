@@ -24,21 +24,21 @@ __HELP__ = f"""
 ⪼ Dokumen untuk Streaming
 
 <blockquote> Memulai streaming audio.
- <code>{0}play  (judul/balas media/link) </blockquote> 
+ <code>play  (judul/balas media/link) </blockquote> 
 
 <blockquote> Memulai Streaming Video.
-<code>{0}vplay  (judul/balas media/link) </blockquote> 
+<code>vplay  (judul/balas media/link) </blockquote> 
 
 <blockquote> Menghentikam Streaming.
-<code>{0}end </blockquote>
+<code>end </blockquote>
 
 <blockquote>Menjeda Streaming.
-<code>{0} pause</blockquote>
+<code>pause</blockquote>
 
 <blockquote> Melanjutkan Streaming yang dijeda.
-<code>{0}resume   </blockquote> 
+<code>resume   </blockquote> 
 
-🤖 USER IPAN LITE
+🤖USERBOT LITE-IPAN✨
 """
 
 import os
@@ -68,7 +68,7 @@ async def play_audio(client, message):
         return await message.reply(f"{brhsl} **Playing converted audio!**")
 
     if len(message.command) < 2:
-        return await message.reply(f"{ggl} **❌ Gunakan perintah: .play [url_link] .play [title]**")
+        return await message.reply(f"{ggl} **❌ Gunakan perintah: .play [url_link ] .play [JUDUL]**")
 
     query = " ".join(message.command[1:])
     url = query if "youtube.com" in query or "youtu.be" in query else None
@@ -117,7 +117,7 @@ async def play_video(client, message):
         return await message.reply(f"{brhsl} **Playing replay video!**")
 
     if len(message.command) < 2:
-        return await message.reply(f"{ggl} **❌ Gunakan perintah: .vplay [LINK YOUTUBE] .vplay [JUDUL]**")
+        return await message.reply(f"{ggl} **❌ Gunakan perintah: .vplay [LINK YOUTUBE]   .vplay [JUDUL]**")
 
     query = " ".join(message.command[1:])
     url = query if "youtube.com" in query or "youtu.be" in query else None
