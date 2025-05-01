@@ -35,7 +35,7 @@ async def _(client, message):
 {tion} {ngentod} : <code>{client.me.mention}</code>
 {yubot} {kontol} : <code>{bot.me.mention}</code></blockquote>
 
-<blockquote><b>USERLITE KEREN IPANXD🤖</b></blockquote>"""
+<blockquote><b>🤖USERBOT @UserboootliteIPAN_bot ✨</b></blockquote>"""
         await message.reply(_ping)
     else:
         _ping = f"""
