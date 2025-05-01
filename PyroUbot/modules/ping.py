@@ -43,7 +43,7 @@ async def _(client, message):
 {ngentod} : <code>{client.me.mention}</code>
 {kontol} : <code>{bot.me.mention}</code></blockquote>
 
-<blockquote><b>USERLITE KEREN IPANXD 🤖</b></blockquote>"""
+<blockquote><b>🤖USERBOT @UserboootliteIPAN_bot ✨</b></blockquote>"""
         await message.reply(_ping)
 
 @PY.INDRI("1ping")
@@ -71,7 +71,7 @@ async def _(client, message):
 {tion}owner : {client.me.mention}
 {yubot}ubot : {bot.me.mention}</blockquote>
 
-<blockquote><b>USERLITE KEREN IPANXD</b></blockquote>
+<blockquote><b>🤖USERBOT @UserboootliteIPAN_bot ✨</b></blockquote>
     """
         await message.reply(_ping)
     else:
