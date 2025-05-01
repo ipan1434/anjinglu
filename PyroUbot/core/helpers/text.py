@@ -18,9 +18,6 @@ class MSG:
 <blockquote><b>• ᴘʏᴛʜᴏɴ: 3.10.12</b>
 <b>• ᴘʏʀᴏɢᴀᴍ: 3.0.2</b>
 <b>• ᴛᴏᴛᴀʟ ᴘᴇɴɢɢᴜɴᴀ: {len(ubot._ubot)} users</b>
-<b>ping: {ping}MS</b>
-<b>uptime: {uptime}</b>
-
 <u><b>📖 penjelasan menu button:</b></u>
 <b>﻿• help menu: untuk melihat menu bot.</b>
 <b>• buat userbot: untuk membuat ubot.</b>
