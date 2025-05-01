@@ -9,12 +9,10 @@ __HELP__ = """
 
 <blockquote> 📚 perintah: .clone [@username]
 📚 perintah: .clone [reply_pengguna]</blockquote> 
-
 <blockquote> 📝 penjelasan: untuk mencuri identitas asli pengguna</blockquote> 
 
 <blockquote> 📚 perintah: .clone [query]
 ✨ query: restores</blockquote> 
-
 <blockquote> 📝 penjelasan: untuk mengembalikan akun ke profile asli</blockquote> 
 
   🤖 USERBOT LITE IPAN
