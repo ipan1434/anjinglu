@@ -20,7 +20,7 @@ async def _(client, message):
     await client.invoke(Ping(ping_id=0))
     end = datetime.now()
     uptime = await get_time((time() - start_time))
-    delta_ping_formatted = round((end - start).microseconds / 00000, 2)
+    delta_ping_formatted = round((end - start).microseconds / 10000, 2)
     pong = await EMO.PING(client)
     tion = await EMO.MENTION(client)
     yubot = await EMO.UBOT(client)
