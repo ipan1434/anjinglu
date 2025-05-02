@@ -72,9 +72,10 @@ async def giben(client: Client, message: Message):
         r"**#GBanned**"
         f"\n\n**Nama:** [{user.first_name}](tg://user?id={user.id})"
         f"\n**User ID:** `{user.id}`"
+        f"\n**ALASAN1 :** `ANAK ANJING`"
     )
     if reason:
-        msg += f"\n**Alasan:** `{reason}`"
+        msg += f"\n**Alasan1:** `{reason}`"
     msg += f"\n**Sukses di:** `{done}` **Obrolan**"
     await asyncio.sleep(5)
     await ex.edit(msg)
@@ -109,9 +110,10 @@ async def gimut(client: Client, message: Message):
         r"**#GMuted**"
         f"\n\n**Nama:** [{user.first_name}](tg://user?id={user.id})"
         f"\n**User ID:** `{user.id}`"
+        f"\n**Alasan1 :** `ANAK ANJING`"
     )
     if reason:
-        msg += f"\n**Alasan:** `{reason}`"
+        msg += f"\n**Alasan2:** `{reason}`"
     msg += f"\n**Sukses di:** `{done}` **Obrolan**"
     await asyncio.sleep(5)
     await ex.edit(msg)
@@ -146,9 +148,10 @@ async def gikik(client: Client, message: Message):
         r"**#GKicked**"
         f"\n\n**Nama:** [{user.first_name}](tg://user?id={user.id})"
         f"\n**User ID:** `{user.id}`"
+        f"\n**alasan1 :** `ANAK ANJING`"
     )
     if reason:
-        msg += f"\n**Alasan:** `{reason}`"
+        msg += f"\n**Alasan2:** `{reason}`"
     msg += f"\n**Sukses di:** `{done}` **Obrolan**"
     await asyncio.sleep(5)
     await ex.edit(msg)
