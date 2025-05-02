@@ -1,6 +1,6 @@
 __MODULE__ = "sudo"
 __HELP__ = """
-<i>⪼Dokumen untuk Sudo</i>
+<i>⪼ Dokumen untuk Sudo</i>
 
 <blockquote>Menambahkan pengguna ke sudo list.
    .addsudo (pengguna balasan)</blockquote> 
