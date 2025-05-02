@@ -1,15 +1,18 @@
 __MODULE__ = "sudo"
 __HELP__ = """
-<b>📚bantuan untuk sudo
+<i>⪼Dokumen untuk Sudo</i>
 
-<blockquote>•🚦 perintah: `{0}addsudo` [reply/username/id]
-• 🦠penjelasan: tambah pengguna sudo.</blockquote>
+<blockquote>Menambahkan pengguna ke sudo list.
+   .addsudo (pengguna balasan)</blockquote> 
 
-<blockquote>• 🚦perintah: `{0}delsudo` [reply/username/id]
-• 🦠penjelasan: hapus pengguna sudo.</blockquote>
+<blockquote> Menghapus pengguna dari sudo list.
+   .delsudo (pengguna balasan)</blockquote> 
 
-<blockquote>•🚦 perintah: `{0}sudolist`
-• 🦠penjelasan: cek pengguna sudo.</blockquote></b>
+<blockquote> Melihat daftar pengguna sudo.
+   .sudolist</blockquote> 
+   
+
+🤖 IPAN LITE - USERBOT✨
 """
 
 
