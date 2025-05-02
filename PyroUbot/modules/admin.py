@@ -199,8 +199,6 @@ async def _(client, message):
 <blockquote><b>{bcs}ᴡᴀʀɴɪɴɢ: {mention}<b>
 <b>{tion}ᴀᴅᴍɪɴ: {message.from_user.mention}</b>
 <b>{ktrng}ᴀʟᴀꜱᴀɴ: {reason}</b></blockquote>
-
-<blockquote><b>USERBOT LITE IPAN🤖</b></blockquote>
             """
         try:
             await message.chat.ban_member(user_id)
@@ -227,8 +225,6 @@ async def _(client, message):
 <blockquote><b>{bcs}ᴡᴀʀɴɪɴɢ: {mention}<b>
 <b>{tion}ᴀᴅᴍɪɴ: {message.from_user.mention}</b>
 <b>{ktrng}ᴀʟᴀꜱᴀɴ: {reason}</b></blockquote>
-
-<blockquote><b>USERBOT LITE IPAN 🤖</b></blockquote>
             """
         try:
             await message.chat.ban_member(user_id)
@@ -253,8 +249,6 @@ async def _(client, message):
 <blockquote><b>{bcs}ᴡᴀʀɴɪɴɢ: {mention}</b>
 <b>{tion}ᴀᴅᴍɪɴ: {message.from_user.mention}</b>
 <b>{ktrng}ᴀʟᴀꜱᴀɴ: {reason}</blockquote></b>\n<blockquote><b>ᴋᴇᴛ: ᴍᴀᴍᴘᴜs ᴅɪ ᴍᴜᴛᴇ ᴇᴛᴍɪɴ</blockquote></b>
-
-<blockquote><b>USERBOT LITE IPAN</b></blockquote>
             """
         try:
             await message.chat.restrict_member(user_id, ChatPermissions())
