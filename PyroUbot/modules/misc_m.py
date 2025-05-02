@@ -66,16 +66,12 @@ async def _(client, message):
 <blockquote><b>{pong} sᴛᴀᴛᴜs ᴀᴋᴜɴ ᴘʀᴇᴍɪᴜᴍ : ᴛʀᴜᴇ</b>
 <b>{tion} ʟɪᴍɪᴛ ᴄʜᴇᴄᴋ : ᴀᴋᴜɴ ᴀɴᴅᴀ ᴛɪᴅᴀᴋ ᴅɪʙᴀᴛᴀsɪ</b>
 <b>{yubot} ᴜʙᴏᴛ : {bot.me.mention}</b></blockquote>
-
-<blockquote><b>USERBOT 5K/BULAN BY @Ipaaaaajaalaah_bot</b></blockquote>
 """
             else:
                 text = f"""
 <blockquote><b>sᴛᴀᴛᴜs ᴀᴋᴜɴ  : ʙᴇʟɪ ᴘʀᴇᴍ ᴅᴜʟᴜ ʏᴀ</b>
 <b>ʟɪᴍɪᴛ ᴄʜᴇᴄᴋ : ᴀᴋᴜɴ ᴀɴᴅᴀ ᴛɪᴅᴀᴋ ᴅɪʙᴀᴛᴀsɪ</b>
 <b>ᴜʙᴏᴛ : {bot.me.mention}</b></blockquote>
-
-<blockquote><b>USERBOT 5K/BULAN BY @Ipaaaaajaalaah_bot</b></blockquote>
 """
             await client.send_message(message.chat.id, text)
             return await client.invoke(DeleteHistory(peer=bot_info, max_id=0, revoke=True))
@@ -85,16 +81,12 @@ async def _(client, message):
 <blockquote><b>{pong} sᴛᴀᴛᴜs ᴀᴋᴜɴ ᴘʀᴇᴍɪᴜᴍ : ᴛʀᴜᴇ</b>
 <b>{tion} ʟɪᴍɪᴛ ᴄʜᴇᴄᴋ : ᴀᴋᴜɴ ᴀɴᴅᴀ ʙᴇʀᴍᴀsᴀʟᴀʜ</b> 
 <b>{yubot} ᴜʙᴏᴛ : {bot.me.mention}</b></blockquote>
-
-<blockquote><b>USERBOT 5K/BULAN BY @Ipaaaaajaalaah_bot</b></blockquote>
 """
             else:
                 text = f"""
 <blockquote><b>sᴛᴀᴛᴜs ᴀᴋᴜɴ  : ʙᴇʟɪ ᴘʀᴇᴍ ᴅᴜʟᴜ ʏᴀ</b>
 <b>ʟɪᴍɪᴛ ᴄʜᴇᴄᴋ : ᴀᴋᴜɴ ᴀɴᴅᴀ ʙᴇʀᴍᴀsᴀʟᴀʜ</b>
 <b>ᴜʙᴏᴛ : {bot.me.mention}</b></blockquote>
-
-<blockquote><b>USERBOT 5K/BULAN BY @Ipaaaaajaalaah_bot</b></blockquote>
 """
             await client.send_message(message.chat.id, text)
             return await client.invoke(DeleteHistory(peer=bot_info, max_id=0, revoke=True))
