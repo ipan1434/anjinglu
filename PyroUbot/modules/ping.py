@@ -40,15 +40,6 @@ async def _(client, message):
     await asyncio.sleep(5)
     await sticker.delete()
     return await message.reply(_ping)
-    else:
-        _ping = f"""
-<blockquote>{pantek} : {str(delta_ping_formatted).replace('.', ',')} ms
-{ngentod} : <code>{client.me.mention}</code>
-{kontol} : <code>{bot.me.mention}</code></blockquote>
-"""
-    await asyncio.sleep(5)
-    await sticker.delete()
-    return await message.reply(_ping)
 
 @PY.INDRI("1ping")
 async def _(client, message):
