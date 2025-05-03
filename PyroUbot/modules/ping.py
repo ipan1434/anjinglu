@@ -16,6 +16,8 @@ from PyroUbot import *
 @PY.UBOT("ping")
 @PY.TOP_CMD
 async def _(client, message):
+    data = await dB.get_var(client.me.id, "ping_sticker") or "CAACAgUAAyEGAASMNRIdAAJYzmgVNgYn8vOOtqdRc4RN0lgjHS2VAAJ3DwACCH0xVdhFo-FpuZFqHgQ"
+    sticker = await message.reply_sticker(data)
     start = datetime.now()
     await client.invoke(Ping(ping_id=0))
     end = datetime.now()
@@ -35,14 +37,18 @@ async def _(client, message):
 {tion} {ngentod} : <code>{client.me.mention}</code>
 {yubot} {kontol} : <code>{bot.me.mention}</code></blockquote>
 """
-        await message.reply(_ping)
+    await asyncio.sleep(5)
+    await sticker.delete()
+    return await message.reply(_ping)
     else:
         _ping = f"""
 <blockquote>{pantek} : {str(delta_ping_formatted).replace('.', ',')} ms
 {ngentod} : <code>{client.me.mention}</code>
 {kontol} : <code>{bot.me.mention}</code></blockquote>
 """
-        await message.reply(_ping)
+    await asyncio.sleep(5)
+    await sticker.delete()
+    return await message.reply(_ping)
 
 @PY.INDRI("1ping")
 async def _(client, message):
