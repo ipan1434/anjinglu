@@ -1,6 +1,6 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 from PyroUbot.core.database import DB_PATH, dB
-from .state import state
+from PyroUbot.core.state import state
 
 from PyroUbot.config import MONGO_URL
 
