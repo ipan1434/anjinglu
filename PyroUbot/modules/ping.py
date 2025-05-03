@@ -8,7 +8,6 @@ from datetime import datetime
 from gc import get_objects
 from time import time
 
-from PyroUbot import dB
 from pyrogram.raw import *
 from pyrogram.raw.functions import Ping
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
@@ -17,8 +16,6 @@ from PyroUbot import *
 @PY.UBOT("ping")
 @PY.TOP_CMD
 async def _(client, message):
-    data = await dB.get_var(client.me.id, "ping_sticker") or "CAACAgUAAyEGAASMNRIdAAJYzmgVNgYn8vOOtqdRc4RN0lgjHS2VAAJ3DwACCH0xVdhFo-FpuZFqHgQ"
-    sticker = await message.reply_sticker(data)
     start = datetime.now()
     await client.invoke(Ping(ping_id=0))
     end = datetime.now()
@@ -37,10 +34,17 @@ async def _(client, message):
 <blockquote>{pong} {pantek} : {str(delta_ping_formatted).replace('.', ',')} ms
 {tion} {ngentod} : <code>{client.me.mention}</code>
 {yubot} {kontol} : <code>{bot.me.mention}</code></blockquote>
-"""
-    await asyncio.sleep(5)
-    await sticker.delete()
-    return await message.reply(_ping)
+
+<blockquote><b>USERBOT 5K/BULAN BY @Ipaaaaajaalaah_bot</b></blockquote>"""
+        await message.reply(_ping)
+    else:
+        _ping = f"""
+<blockquote>{pantek} : {str(delta_ping_formatted).replace('.', ',')} ms
+{ngentod} : <code>{client.me.mention}</code>
+{kontol} : <code>{bot.me.mention}</code></blockquote>
+
+<blockquote><b>USERBOT 5K/BULAN BY @Ipaaaaajaalaah_bot</b></blockquote>"""
+        await message.reply(_ping)
 
 @PY.INDRI("1ping")
 async def _(client, message):
@@ -66,9 +70,11 @@ async def _(client, message):
 <blockquote>{pong}pong : {str(delta_ping_formatted).replace('.', ',')} ms
 {tion}owner : {client.me.mention}
 {yubot}ubot : {bot.me.mention}</blockquote>
+
+<blockquote><b>USERBOT 5K/BULAN BY @Ipaaaaajaalaah_bot</b></blockquote>
     """
         await message.reply(_ping)
     else:
-        await message.reply(f"<blockquote>pong : {str(delta_ping_formatted).replace('.', ',')} ms</blockquote>\n\n<blockquote><b>👾 USERBOT 👾</b></blockquote>")
+        await message.reply(f"<blockquote>pong : {str(delta_ping_formatted).replace('.', ',')} ms</blockquote>\n\n<blockquote><b>USERBOT 5K/BULAN BY @Ipaaaaajaalaah_bot</b></blockquote>")
 
 
