@@ -8,6 +8,7 @@ from datetime import datetime
 from gc import get_objects
 from time import time
 
+from PyroUbot import dB
 from pyrogram.raw import *
 from pyrogram.raw.functions import Ping
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
