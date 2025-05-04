@@ -14,18 +14,20 @@ class MSG:
 
     def START(message):
         return f"""
-<u><b>👋🏻 Halooo </b></u><a href=tg://user?id={message.from_user.id}>{message.from_user.first_name} {message.from_user.last_name or ''}</a>
-<blockquote><b>• ᴘʏᴛʜᴏɴ: 3.10.12</b>
-<b>• ᴘʏʀᴏɢᴀᴍ: 3.0.2</b>
-<b>• ᴛᴏᴛᴀʟ ᴘᴇɴɢɢᴜɴᴀ: {len(ubot._ubot)} users</b>
+```
+👋🏻 Halooo  href=tg://user?id={message.from_user.id}>{message.from_user.first_name} {message.from_user.last_name or ''}
 
-<u><b>📖 penjelasan menu button:</b></u>
-<b>﻿• help menu: untuk melihat menu bot.</b>
-<b>• buat userbot: untuk membuat ubot.</b>
-<b>• beli userbot: untuk membeli akses.</b>
-<b>• support: untuk chat owner jika limit.</b>
-<b>• group support: jika ingin bertanya.</b></blockquote>
-<u><b>☁ silahkan pilih tombol dibawah ini:</b></u>
+• ᴘʏᴛʜᴏɴ: 3.10.12
+• ᴘʏʀᴏɢᴀᴍ: 3.0.2
+• ᴛᴏᴛᴀʟ ᴘᴇɴɢɢᴜɴᴀ: {len(ubot._ubot)} users
+
+📖 penjelasan menu button:
+• help menu: untuk melihat menu bot.
+• buat userbot: untuk membuat ubot.
+• beli userbot: untuk membeli akses.
+• support: untuk chat owner jika limit.
+• group support: jika ingin bertanya
+☁ silahkan pilih tombol dibawah ini```
 """
 
     def TEXT_PAYMENT(harga, total, bulan):
