@@ -17,8 +17,8 @@ async def _(client, message):
     buttons = BTN.START(message)
     msg = MSG.START(message)
 
-    await message.reply_photo(
-        photo="https://files.catbox.moe/79jvq7.jpg", 
+    await message.reply_video(
+        video="https://files.catbox.moe/trxfte.mp4", 
         caption=msg, 
         reply_markup=InlineKeyboardMarkup(buttons)
     )
