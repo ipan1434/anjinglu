@@ -14,7 +14,7 @@ class MSG:
 
     def START(message):
         return f"""
-```
+
 👋🏻😄 HALOO</b></u><a href=tg://user?id={message.from_user.id}>{message.from_user.first_name} {message.from_user.last_name or ''}
 • ᴘʏᴛʜᴏɴ: 3.10.12
 • ᴘʏʀᴏɢᴀᴍ: 3.0.2
@@ -27,7 +27,7 @@ class MSG:
 • beli userbot: untuk membeli akses.
 • support: untuk chat owner jika limit.
 • group support: jika ingin bertanya
-☁ silahkan pilih tombol dibawah ini```
+☁ silahkan pilih tombol dibawah ini
 """
 
     def TEXT_PAYMENT(harga, total, bulan):
