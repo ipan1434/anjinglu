@@ -19,6 +19,7 @@ class MSG:
 • ᴘʏᴛʜᴏɴ: 3.10.12
 • ᴘʏʀᴏɢᴀᴍ: 3.0.2
 • ᴛᴏᴛᴀʟ ᴘᴇɴɢɢᴜɴᴀ: {len(ubot._ubot)} users
+<a href='https://telegra.ph/RESIKO-USERBOT-03-26-2'>RESIKO MENGGUNAKAN UBOT</a>
 
 📖 penjelasan menu button:
 • help menu: untuk melihat menu bot.
