@@ -15,7 +15,7 @@ class MSG:
     def START(message):
         return f"""
 ```
-👋🏻 Halooo  </b></u><a href=tg://user?id={message.from_user.id}>{message.from_user.first_name} {message.from_user.last_name or ''}
+👋🏻😄HALOO </b></u><a href=tg://user?id={message.from_user.id}>{message.from_user.first_name} {message.from_user.last_name or ''}
 • ᴘʏᴛʜᴏɴ: 3.10.12
 • ᴘʏʀᴏɢᴀᴍ: 3.0.2
 • ᴛᴏᴛᴀʟ ᴘᴇɴɢɢᴜɴᴀ: {len(ubot._ubot)} users
