@@ -7,8 +7,8 @@ __MODULE__ = "ᴛᴏᴜʀʟ"
 __HELP__ = """
 <blockquote><b>Bantuan untuk tourl
 
-perintah : <code>{0}tourl</code> [reply media/text]
-    mengapload media/text ke Link</b></blockquote>
+Perintah : <code>{0}tourl</code> [reply media/text]
+    Mengupload media ke uguu.se dan memberikan link.</b></blockquote>
 """
 
 async def upload_file(buffer: BytesIO) -> str:
@@ -20,18 +20,18 @@ async def upload_file(buffer: BytesIO) -> str:
     buffer.seek(0)
     form = aiohttp.FormData()
     form.add_field(
-        'fileToUpload',
+        'files[]',
         buffer,
         filename='file.' + ext,
         content_type=kind.mime
     )
-    form.add_field('reqtype', 'fileupload')
 
     async with aiohttp.ClientSession() as session:
-        async with session.post('https://catbox.moe/user/api.php', data=form) as response:
+        async with session.post('https://uguu.se/upload.php', data=form) as response:
             if response.status != 200:
                 raise Exception(f"Failed to upload file: {response.status}")
-            return await response.text()
+            json_response = await response.json()
+            return json_response["files"][0]["url"]
 
 @PY.UBOT("tourl|tg")
 async def _(client, message):
@@ -43,8 +43,11 @@ async def _(client, message):
             buffer = BytesIO(f.read())
             try:
                 media_url = await upload_file(buffer)
-                await message.reply(f"<b>berhasil diupload ke : <a href='{media_url}'>LINK NYA KINGZ</a></b>")
+                await message.reply(
+                    f"<b>Berhasil diupload ke: <a href='{media_url}'>uguu.se</a></b>",
+                    disable_web_page_preview=False
+                )
             except Exception as e:
                 await message.reply(f"Error: {e}")
     else:
-        await message.reply("Please reply to a media message to upload.")
+        await message.reply("Balas pesan media untuk diupload ke uguu.se.")
