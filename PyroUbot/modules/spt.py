@@ -56,7 +56,7 @@ async def jawab_pesan_callback(client, callback_query):
     SUPPORT.append(get.id)
     try:
         button = [
-            [InlineKeyboardButton("ʙᴀᴛᴀʟᴋᴀɴ", callback_data=f"batal {user_id}")]
+            [InlineKeyboardButton("❌ ʙᴀᴛᴀʟᴋᴀɴ", callback_data=f"batal {user_id}")]
         ]
         pesan = await client.ask(
             user_id,
@@ -86,7 +86,7 @@ async def jawab_pesan_callback(client, callback_query):
             )
             SUPPORT.remove(get.id)
             await pesan.request.edit(
-                f"<b>ꜱɪʟᴀʜᴋᴀɴ ᴋɪʀɪᴍ ʙᴀʟᴀꜱᴀɴ ᴀɴᴅᴀ: {full_name}</b>",
+                f"<b>ᴛᴇʀɪᴍᴀᴋᴀsɪʜ sᴜᴅᴀʜ ᴍᴇɴɢɪʀɪᴍ ᴄʜᴀᴛ ᴋᴇ ᴘᴀᴅᴀ ᴏᴡɴᴇʀ: {full_name} ᴍᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ ᴊᴀᴡᴀᴘᴀɴ ᴅᴀʀɪ ᴏᴡɴᴇʀ ᴋᴜ ʏᴀ</b>",
             )
             await client.send_message(user_id, text)
         except Exception as error:
