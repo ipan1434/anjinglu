@@ -13,19 +13,19 @@ async def support_callback(client, callback_query):
     SUPPORT.append(get.id)
     try:
         button = [
-            [InlineKeyboardButton("ʙᴀᴛᴀʟᴋᴀɴ", callback_data=f"batal {user_id}")]
+            [InlineKeyboardButton("❌ ʙᴀᴛᴀʟᴋᴀɴ", callback_data=f"batal {user_id}")]
         ]
         pesan = await client.ask(
             user_id,
-            f"<b>ꜱɪʟᴀʜᴋᴀɴ ᴋɪʀɪᴍ ᴘᴇʀᴛᴀɴʏᴀᴀɴ ᴀɴᴅᴀ: {full_name}</b>",
+            f"<blockquote> halo 👋  {full_name}   💬 silahkan untuk mengirim pesan/pertanyaan kepada owner kami:  </blockquote>",
             reply_markup=InlineKeyboardMarkup(button),
             timeout=90,
         )
     except asyncio.TimeoutError as out:
         if get.id in SUPPORT:
             SUPPORT.remove(get.id)
-            return await client.send_message(get.id, "ᴘᴇᴍʙᴀᴛᴀʟᴀɴ ᴏᴛᴏᴍᴀᴛɪꜱ")
-    text = f"<b>ᴘᴇʀᴛᴀɴʏᴀᴀɴ ᴀɴᴅᴀ ꜱᴜᴅᴀʜ ᴛᴇʀᴋɪʀɪᴍ : {full_name}</b>"
+            return await client.send_message(get.id, "ᴘᴇsᴀɴ ᴏᴛᴏᴍᴀᴛɪs ᴅɪ ʙᴀᴛᴀʟᴋᴀɴ")
+    text = f"<blockquote> halo 👋  {full_name}   💬 silahkan untuk mengirim pesan/pertanyaan kepada owner kami:  </blockquote>"
     buttons = [
         [
             InlineKeyboardButton("👤 ᴘʀᴏꜰɪʟ", callback_data=f"profil {user_id}"),
@@ -60,7 +60,7 @@ async def jawab_pesan_callback(client, callback_query):
         ]
         pesan = await client.ask(
             user_id,
-            f"<b>ꜱɪʟᴀʜᴋᴀɴ ᴋɪʀɪᴍ ʙᴀʟᴀꜱᴀɴ ᴀɴᴅᴀ: {full_name}</b>",
+            f"<blockquote> halo 👋  {full_name}   💬 silahkan untuk mengirim pesan/pertanyaan kepada owner kami:  </blockquote>",
             reply_markup=InlineKeyboardMarkup(button),
             timeout=300,
         )
@@ -68,14 +68,14 @@ async def jawab_pesan_callback(client, callback_query):
         if get.id in SUPPORT:
             SUPPORT.remove(get.id)
             return await client.send_message(get.id, "ᴘᴇᴍʙᴀᴛᴀʟᴀɴ ᴏᴛᴏᴍᴀᴛɪꜱ")
-    text = f"<b>ꜱɪʟᴀʜᴋᴀɴ ᴋɪʀɪᴍ ʙᴀʟᴀꜱᴀɴ ᴀɴᴅᴀ : {full_name}</b>"
+    text = f"<blockquote> halo 👋  {full_name}   💬 silahkan untuk mengirim pesan/pertanyaan kepada owner kami:  </blockquote>"
     if not user_ids == OWNER_ID:
         buttons = [[InlineKeyboardButton("💬 ᴊᴀᴡᴀʙ 💬", f"jawab_pesan {user_id}")]]
     else:
         buttons = [
             [
                 InlineKeyboardButton("👤 ᴘʀᴏꜰɪʟ", callback_data=f"profil {user_id}"),
-                InlineKeyboardButton("ᴊᴀᴡᴀʙ 💬", callback_data=f"jawab_pesan {user_id}"),
+                InlineKeyboardButton("『ᴊᴀᴡᴀᴘᴀɴ 💬』", callback_data=f"jawab_pesan {user_id}"),
             ],
         ]
     if get.id in SUPPORT:
