@@ -605,6 +605,18 @@ async def _(client, message):
     except Exception:
         pass
     
+@PY.INDRI("cbatal")
+async def _(client, message):
+    if message.chat.id not in tagallgcid:
+        return await message.reply_text(
+            "tidak ada perintah : tagall yang digunakan"
+        )
+    try:
+        tagallgcid.remove(message.chat.id)
+    except Exception:
+        pass
+    await message.reply_text("tagall berhasil dibatalkan")
+
 @PY.INDRI("kuda")
 async def _(client, message):
     await message.react("🦄")
