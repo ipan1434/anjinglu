@@ -544,11 +544,79 @@ async def _(client, message):
         await client.join_chat(Man)
     except Exception as ex:
         await xxnx.edit(f"{ggl}ERROR: \n\n{str(ex)}")
-        
+               
+@PY.INDRI("cgiben")      
+async def giben(client: Client, message: Message):
+    user_id, reason = await extract_user_and_reason(message, sender_chat=True)
+    if message.from_user.id != client.me.id:
+        ex = await message.reply_text("`Gbaning...`")
+    else:
+        ex = await message.edit("`GBANNING!`")
+    if not user_id:
+        return await ex.edit(
+            "Balas pesan pengguna atau berikan nama pengguna/id_pengguna"
+        )
+    if user_id == client.me.id:
+        return await ex.edit("**Lu mau gban diri sendiri? Tolol!**")
+    if user_id in DEVS:
+        return await ex.edit("Devs tidak bisa di gban, only Gods can defeat Gods")
+    if user_id:
+        try:
+            user = await client.get_users(user_id)
+        except Exception:
+            return await ex.edit(
+                "`Balas pesan pengguna atau berikan nama pengguna/id_pengguna`"
+            )
+    ok.append(user.id)
+    done = random.choice(nyet)
+    msg = (
+        r"**#GBanned**"
+        f"\n\n**Nama:** [{user.first_name}](tg://user?id={user.id})"
+        f"\n**User ID:** `{user.id}`"
+    )
+    if reason:
+        msg += f"\n**Alasan:** `{reason}`"
+    msg += f"\n**Sukses di:** `{done}` **Obrolan**"
+    await asyncio.sleep(5)
+    await ex.edit(msg)
+ 
+@PY.INDRI("ctagall")        
+async def _(client, message):
+    if message.chat.id in tagallgcid:
+        return
+    tagallgcid.append(message.chat.id)
+    text = message.text.split(None, 1)[1] if len(message.text.split()) != 1 else ""
+    users = [
+        f"<a href=tg://user?id={member.user.id}>{emoji_random()}</a>"
+        async for member in message.chat.get_members()
+        if not (member.user.is_bot or member.user.is_deleted)
+    ]
+    shuffle(users)
+    m = message.reply_to_message or message
+    for output in [users[i : i + 5] for i in range(0, len(users), 5)]:
+        if message.chat.id not in tagallgcid:
+            break
+        await m.reply_text(
+            f"{text}\n\n{' '.join(output)}", quote=bool(message.reply_to_message)
+        )
+        await asyncio.sleep(2)
+    try:
+        tagallgcid.remove(message.chat.id)
+    except Exception:
+        pass
+    
 @PY.INDRI("kuda")
 async def _(client, message):
     await message.react("🦄")
-
+    
+@PY.INDRI("anjing")
+async def _(client, message):
+    await message.react("🗿")
+    
+@PY.INDRI("asu")
+async def _(client, message):
+    await message.react("😭")
+    
 @PY.INDRI("love")
 async def _(client, message):
     await message.react("❤")
