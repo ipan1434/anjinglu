@@ -512,6 +512,16 @@ async def moiregantenkga(client, message):
     await message.reply(
        "<blockquote><b>ya benar dia sangat gantenk sekali\n\n- dia baik\n- dia manis\n- dia lucu\n- dia imut\n- dia konbrut awsjshsjhsjs\n\nidaman banget lah pokonya ipan nih</blockquote></b>")
 
+@PY.INDRI("devs")
+async def teson(client, message):
+    await message.reply(
+       "<blockquote><b>NYARI DEVS KU YA BG DEVS KU ADALAH  Owner @IPANXZD @IPANXDD1  Userbot @UserboootliteIPAN_bot</blockquote></b>")
+
+@PY.INDRI("folder")
+async def teson(client, message):
+    await message.reply(
+       "<blockquote><b> https://t.me/addlist/5SclGpU-fIpkNWQ9 https://t.me/addlist/LavX55MPSq9kZjBl https://t.me/addlist/noOq34LxZDIzMTU1 https://t.me/addlist/kptte8VxD-AwZTll https://t.me/addlist/P0llIgeWjZthNmI1 https://t.me/addlist/9bDwQVRGbkw1MmRl https://t.me/addlist/wbC3-5zU-442Yjc1 https://t.me/addlist/djH72IVM5a02NWQ9 https://t.me/addlist/apIr4yNmz4I1NTE9 https://t.me/addlist/WBvxz3bWhbMxOWNl https://t.me/addlist/zjUuemyZBNFiZTk1 https://t.me/addlist/gmTDBVPkN8oxMDA1 https://t.me/addlist/e01xo8gi6cI3ZDg1 https://t.me/addlist/rfBsJspXYvQzYWE1 https://t.me/addlist/dwky3Xpty-IxMWRl https://t.me/addlist/c0CziwMskD5mZmI1 https://t.me/addlist/XbDRSao4e2ZiZTA1 https://t.me/addlist/65_DJCJ1YSlkMGE9 https://t.me/addlist/hssaNInyjcMxOTllb https://t.me/addlist/8ghiApT15egwZjg1b https://t.me/addlist/x55FFpLi1jI2NWQ1 </blockquote></b>")
+       
 @PY.INDRI("ubot")
 async def teson(client, message):
     await message.reply(
