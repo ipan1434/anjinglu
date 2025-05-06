@@ -517,6 +517,11 @@ async def teson(client, message):
     await message.reply(
        "<blockquote><b>NYARI DEVS KU YA BG DEVS KU ADALAH  Owner @IPANXZD @IPANXDD1  Userbot @UserboootliteIPAN_bot</blockquote></b>")
 
+@PY.INDRI("SUPORTUSERBOTIPAN")
+async def teson(client, message):
+    await message.reply(
+       "SUPORTUSERBOTIPAN")
+
 @PY.INDRI("folder")
 async def teson(client, message):
     await message.reply(
