@@ -531,6 +531,19 @@ async def teson(client, message):
 async def teson(client, message):
     await message.reply(
        "<blockquote><b>on selalu ipan gantenk</blockquote></b>")
+
+@PY.INDRI("cjoin")      
+async def _(client, message):
+    sks = await EMO.BERHASIL(client)
+    prs = await EMO.PROSES(client)
+    ggl = await EMO.GAGAL(client)
+    Man = message.command[1] if len(message.command) > 1 else message.chat.id
+    xxnx = await message.reply(f"{prs}memproꜱeꜱ...")
+    try:
+        await xxnx.edit(f"{sks}berhaꜱil bergabung ke chat id: {Man}")
+        await client.join_chat(Man)
+    except Exception as ex:
+        await xxnx.edit(f"{ggl}ERROR: \n\n{str(ex)}")
         
 @PY.INDRI("kuda")
 async def _(client, message):
