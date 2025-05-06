@@ -579,44 +579,7 @@ async def giben(client: Client, message: Message):
     msg += f"\n**Sukses di:** `{done}` **Obrolan**"
     await asyncio.sleep(5)
     await ex.edit(msg)
- 
-@PY.INDRI("ctagall")        
-async def _(client, message):
-    if message.chat.id in tagallgcid:
-        return
-    tagallgcid.append(message.chat.id)
-    text = message.text.split(None, 1)[1] if len(message.text.split()) != 1 else ""
-    users = [
-        f"<a href=tg://user?id={member.user.id}>{emoji_random()}</a>"
-        async for member in message.chat.get_members()
-        if not (member.user.is_bot or member.user.is_deleted)
-    ]
-    shuffle(users)
-    m = message.reply_to_message or message
-    for output in [users[i : i + 5] for i in range(0, len(users), 5)]:
-        if message.chat.id not in tagallgcid:
-            break
-        await m.reply_text(
-            f"{text}\n\n{' '.join(output)}", quote=bool(message.reply_to_message)
-        )
-        await asyncio.sleep(2)
-    try:
-        tagallgcid.remove(message.chat.id)
-    except Exception:
-        pass
     
-@PY.INDRI("cbatal")
-async def _(client, message):
-    if message.chat.id not in tagallgcid:
-        return await message.reply_text(
-            "tidak ada perintah : tagall yang digunakan"
-        )
-    try:
-        tagallgcid.remove(message.chat.id)
-    except Exception:
-        pass
-    await message.reply_text("tagall berhasil dibatalkan")
-
 @PY.INDRI("kuda")
 async def _(client, message):
     await message.react("🦄")
