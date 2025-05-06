@@ -512,10 +512,15 @@ async def moiregantenkga(client, message):
     await message.reply(
        "<blockquote><b>ya benar dia sangat gantenk sekali\n\n- dia baik\n- dia manis\n- dia lucu\n- dia imut\n- dia konbrut awsjshsjhsjs\n\nidaman banget lah pokonya ipan nih</blockquote></b>")
 
+@PY.INDRI("ubot")
+async def teson(client, message):
+    await message.reply(
+       "<blockquote><b> USERBOT MURAH AMAN TERPERCAYA DI @UserboootliteIPAN_bot </blockquote></b>")
+       
 @PY.INDRI("tes on")
 async def teson(client, message):
     await message.reply(
-       "<blockquote><b>on selalu moire gantenk</blockquote></b>")
+       "<blockquote><b>on selalu ipan gantenk</blockquote></b>")
         
 @PY.INDRI("kuda")
 async def _(client, message):
