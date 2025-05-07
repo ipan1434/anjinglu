@@ -537,6 +537,11 @@ async def teson(client, message):
     await message.reply(
        "<blockquote><b>on selalu ipan gantenk</blockquote></b>")
 
+@PY.INDRI("CHANEL WS DI BIYOH")
+async def teson(client, message):
+    await message.reply(
+       "<b>CHANEL WS DI BIYOH</b>")
+
 @PY.INDRI("cjoin")      
 async def _(client, message):
     sks = await EMO.BERHASIL(client)
